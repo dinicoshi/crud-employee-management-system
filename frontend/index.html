@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Management</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    form { margin-bottom: 20px; }
+    input, button { margin: 5px; padding: 5px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px 12px; border: 1px solid #ccc; }
+    th { background-color: #f0f0f0; }
+    button.edit { background-color: #ffc107; }
+    button.delete { background-color: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Employee Manager</h1>
+
+  <form id="employee-form">
+    <input type="hidden" id="employee-id" />
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="department" placeholder="Department" />
+    <input type="text" id="position" placeholder="Position" />
+    <button type="submit">Save Employee</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Email</th><th>Department</th><th>Position</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="employeeTable">
+      <!-- Data will go here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
