@@ -80,22 +80,49 @@ This project leverages a modern and robust technology stack:
 
 ## Getting Started
 
-First, go to backend/ and run the development server:
+Follow these steps to get the project up and running on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000/api/employees](http://localhost:3000/api/employees) with your browser to see the result.
+* Node.js (LTS version recommended)
+* npm, yarn, pnpm, or bun (your preferred package manager)
+* A MongoDB Atlas account (or a local MongoDB instance) with a database and collection set up. You'll need your MongoDB connection URI.
 
-To view and edit the database using a pleasant, easy-to-use UI, run frontend/index.html:
+### Backend Setup
 
-```bash
-open frontend/index.html
-```
+1.  **Navigate to the backend directory:**
+    ```bash
+    cd backend
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Configure Environment Variables:**
+    Create a `.env.local` file in the `backend/` directory and add your MongoDB connection URI:
+    ```
+    MONGODB_URI=your_mongodb_connection_string
+    ```
+    *Replace `your_mongodb_connection_string` with your actual MongoDB URI (e.g., from MongoDB Atlas).*
+4.  **Run the Backend Development Server:**
+    ```bash
+    npm run dev
+    ```
+    The backend API will be running at `http://localhost:3000`. Your API endpoints will be accessible under `http://localhost:3000/api/employees`.
+
+### Frontend Setup
+
+The frontend is a static HTML/CSS/JS application and doesn't require a separate server or build process.
+
+1.  **Navigate to the frontend directory (from the project root):**
+    ```bash
+    cd frontend
+    ```
+2.  **Open `index.html` in your browser:**
+    ```bash
+    # On macOS
+    open index.html
+    # On Windows
+    start index.html
+    ```
+    The frontend UI will load, interacting with the backend running at `http://localhost:3000`.
